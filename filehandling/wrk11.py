@@ -1,0 +1,40 @@
+import tkinter
+from tkinter import *
+from tkinter import ttk,font
+def login(a):
+    a.destroy()
+    a=Tk()
+    a.geometry("1500X900")   
+    a1=Label(frame,text="username",font=Label,fg="purple")
+    a1.place(relx=0.38,rely=0.24)
+    a2=Label(frame,text="password",font=Label,fg="purple")
+    a2.place(relx=0.38,rely=0.24)
+    l=Entry(frame)
+    l.place(relx=0.20,rely=0.5)
+    l2=Entry(frame)
+    l2.place(relx=0.25,rely=0.5)
+    label=font.Font(a,weight="bold",family="Times New Roman",size=20)
+    x=Label(frame,text="Login",font=label)
+    x.config(bg="pink",fg="sky blue")
+    frame=Frame(a,width=1500,height=50,bg="blue")
+    frame.pack()
+
+def page():
+#Home page
+        k=Tk() 
+        k.geometry("1500x700")
+        k.title("Register")
+        frame=Frame(k,width=1500,height=50,bg="orange")
+        frame.pack()
+        label_font=font.Font(weight="bold",family="Times New Roman",size=25)
+        x=Label(frame,text="Register",font=label_font)
+        x.configure(bg="blue",fg="black")
+        x.place(relx=0.45,rely=0.1)
+        label_font=font.Font(weight="bold",family="Time New Roman",size=20)
+        b=Button(k,text="LOGIN",font=label_font,bg="purple",command=lambda:login(k))
+        b.place(relx=0.45,rely=0.3)
+        frame=Frame(k,width=1000,height=40)
+        frame.pack()
+        frame.place(relx=0.75,rely=0.94)
+        k.mainloop()
+page()  

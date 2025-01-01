@@ -1,0 +1,27 @@
+from tkinter import*
+s=Tk()
+s.geometry("600x600")
+k1=Label(s,text="Name")
+k1.grid(row=0,column=1)
+k2=Label(s,text="age")
+k2.grid(row=1,column=1)
+k3=Label(s,text="Place")
+k3.grid(row=2,column=1)
+k4=Label(s,text="Address")
+k4.grid(row=3,column=1)
+
+l1=Entry(s)
+l1.grid(row=0,column=2)
+l2=Entry(s)
+l2.grid(row=1,column=2)
+l3=Entry(s)
+l3.grid(row=2,column=2)
+l4=Entry(s)
+l4.grid(row=3,column=2)
+ 
+def form():
+    f=open("forms.txt","a")
+    f.write("\n"+l1.get()+"\t"+l2.get()+"\n"+l3.get()+"\n"+l4.get())
+    b1=Button(s,text="Submit",command=lambda:form())
+    b1.grid(row=0,column=3)
+s.mainloop()

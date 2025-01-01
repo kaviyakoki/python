@@ -1,0 +1,8 @@
+f=open("files.txt","a")
+a=input("enter a name:")
+b=input("enter a age:")
+c=input("enter a class:")
+d=input("enter a grade:")
+e=input("enter a year:")
+f.write("\n"+a+"\n"+b+"\n"+c+"\n"+d+"\t"+e)
+f.close()
